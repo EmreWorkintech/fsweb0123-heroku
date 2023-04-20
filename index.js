@@ -13,9 +13,10 @@ console.log(process.env.PORT);
 
 
 server.use(express.json());
+const message = process.env.MESSAGE || 'hello from my Mvp app!...';
 
 server.get('/hello', (req,res)=>{
-    res.json('hello from my PoC app!...')
+    res.json(message)
 
 })
 
